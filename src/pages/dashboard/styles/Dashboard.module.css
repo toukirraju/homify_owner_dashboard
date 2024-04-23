@@ -1,0 +1,134 @@
+.loading__screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999999;
+}
+.main__section {
+  height: calc(100vh - 130px);
+  margin-top: 10px;
+  width: 100%;
+  overflow-y: auto;
+}
+.bar_chart {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 220px;
+}
+
+.circular_charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.progress {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  min-height: 250px;
+  min-width: 250px;
+}
+
+.widget_header {
+  margin: 10px 0;
+}
+.widget_header h5 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: darkslategray;
+}
+.widget_footer,
+.widget_content {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.circular_progress {
+  /* background: #000; */
+  /* height: 250px;
+    width: 200px; */
+  width: 55%;
+  height: 65%;
+  margin: auto;
+}
+.widget_footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: gray;
+}
+
+.circular_pie {
+  padding: 20px 0;
+  height: 250px;
+  width: 250px;
+}
+
+/* Dark mode */
+.dark,
+.bar_chart,
+.progress {
+  background: rgba(255, 255, 255, 0.05);
+}
+@media (prefers-color-scheme: dark) {
+  .dark,
+  .bar_chart,
+  .progress {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .main__section {
+    width: 100%;
+    height: calc(100vh - 190px);
+    overflow-x: hidden;
+  }
+
+  /* circular progress bar */
+  .progress {
+    min-height: 160px;
+    min-width: 130px;
+    /* width: auto; */
+    /* padding: 10px; */
+  }
+  .progress:nth-child(1) {
+    padding: 10px;
+  }
+
+  .widget_header {
+    margin: 2px 0;
+  }
+  .widget_header h5 {
+    margin-bottom: 5px;
+  }
+  .widget_footer,
+  .widget_content {
+    font-size: 10px;
+    font-weight: 900;
+  }
+  .circular_progress {
+    width: 55%;
+    height: 20%;
+  }
+  .widget_footer {
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  /* Pie Chart */
+  .circular_pie {
+    height: 160px;
+    width: 160px;
+  }
+  .bar_chart {
+    margin: 10px 0;
+  }
+}

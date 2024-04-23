@@ -1,0 +1,117 @@
+.ProfileCard_wrapper{
+  margin-top: 10px;
+display: flex;
+/* justify-content: space-between; */
+width: 600px;
+position: relative;
+}
+.Profile__image__section{
+display: flex;
+flex-direction: column;
+/* background: rgb(112, 111, 111); */
+}
+.Profile__image__section img{
+  width: 300px;
+  border-radius: 10px;
+  object-fit:cover;
+}
+.profile_image{
+  background: rgb(199, 197, 197);
+  border-radius: 10px;
+  height: 300px;
+}
+.image__upload input{
+  width: 100%;
+}
+
+.Profile__info__section{
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 0 30px;
+
+}
+
+.Profile__info__section div{
+  /* background: #000; */
+   padding: 3px 0;
+   word-wrap: break-word;
+}
+
+.Profile__info__section span{
+  font-weight: 900;
+  margin-right: 2px;
+  padding: 10px;
+ 
+}
+
+.edit__button{
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  /* padding: 5px 10px; */
+  z-index: 100;
+  cursor: pointer;
+}
+
+.Post__widget__header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 0 20px; */
+}
+.header__title{
+  margin-top: 10px;
+}
+.header__subtitle{
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+}
+
+.owner__container__body{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.owner_content{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  -webkit-box-shadow: inset -4px -3px 40px -7px rgba(173,173,173,0.55);
+  -moz-box-shadow: inset -4px -3px 40px -7px rgba(173,173,173,0.55);
+  box-shadow: inset -4px -3px 40px -7px rgba(173,173,173,0.55);
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 8px;
+  color: gray;
+  font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 769px) {
+  .ProfileCard_wrapper{
+    flex-direction: column;
+    width: 100%
+  }
+  .Profile__image__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(112, 111, 111); */
+    }
+    .profile_image{
+      background: rgb(248, 248, 248);
+      border-radius: 10px;
+      height: 200px;
+    }
+    .Profile__image__section img{
+      width: 200px;
+    }
+}

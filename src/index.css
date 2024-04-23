@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .conversation-row-grid {
+    height: calc(100vh - 129px);
+
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*********************************************************** error message start ********************************************************** */
+
+.error__wrapper {
+  @apply absolute top-0 z-50 flex h-auto w-full items-center justify-center rounded-md bg-red-400 p-2 dark:bg-opacity-50;
+}
+
+.error__container {
+  @apply flex w-11/12 items-center justify-center;
+}
+.error__message {
+  @apply text-white;
+}
+.error__btn {
+  @apply flex h-7 w-7 cursor-pointer items-center justify-center rounded-full shadow-sm shadow-gray-500 drop-shadow-lg hover:bg-red-300 hover:shadow-sm hover:shadow-gray-700 dark:bg-red-300;
+}
+.error__btn__icon {
+  @apply text-red-600 drop-shadow-lg hover:text-red-500 dark:text-red-800;
+}
+
+/*********************************************************** error message end ********************************************************** */

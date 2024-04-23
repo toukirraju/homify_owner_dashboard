@@ -1,0 +1,311 @@
+/* new css start */
+
+/* model heading style  */
+.Modal_header {
+  /* background: #000; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Modal_header_title {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: gray;
+}
+.Modal_header_subtitle {
+  /* margin: 20px 0; */
+  margin-bottom: 10px;
+  color: gray;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* model form style  */
+.input__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px 0;
+}
+.input__container select {
+  margin: 10px 0;
+  padding: 10px;
+}
+.input__label {
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 5px;
+}
+.address_container {
+  display: flex;
+  gap: 10px;
+}
+.address_container input {
+  width: 100%;
+}
+.checkbox_container {
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 700;
+}
+.checkbox_1 {
+  background: rgb(224, 224, 224);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+}
+.submit_button {
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+/* popup window start */
+.popUpWindow__body {
+  margin-top: 10px;
+}
+.popUpWindow_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.popUpWindow__innerCard {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 1px 4px 4px rgba(0, 0, 0, 0.1);
+  margin: 3px 5px;
+  padding: 7px 0;
+  border-radius: 5px;
+  margin-top: 6px;
+  color: var(--gray);
+}
+
+.popUpWindow__card__content {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.popUpWindow__card__icon {
+  margin-left: 5px;
+}
+.popUpWindow__card__elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.popUpWindow__card__elements span:nth-child(1) {
+  color: rgb(63, 62, 62);
+  font-size: 12px;
+  font-weight: 900;
+  border-bottom: 3px solid rgb(231, 228, 228);
+}
+
+.profile__Info__container {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+}
+.left__side {
+  margin: auto;
+  margin-top: 10px;
+}
+.left__side img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.expend_apartment_info {
+  /* display: flex;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  align-items: center;
+  margin: 10px 0;
+  height: 35px;
+  text-transform: uppercase;
+  color: gray;
+  font-weight: bold;
+}
+.expend_apartment_info span:nth-child(1) {
+  margin-left: 10px;
+}
+
+.Modal_button_container {
+  margin: 10px 0;
+  padding: 0 10px;
+  /* display: grid;
+  grid-template-columns: auto auto auto auto ; */
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+}
+
+.popUpWindow_double_elements {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* background: #000; */
+}
+
+.popUpWindow_double_elements div {
+  width: 100%;
+}
+
+/* popup window end */
+
+/* inside modal card start */
+.widget__innerCard {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 1px 4px 4px rgba(0, 0, 0, 0.1);
+  margin: 3px 5px;
+  padding: 7px 0;
+  border-radius: 5px;
+  margin-top: 6px;
+  color: var(--gray);
+}
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .dark,
+  .popUpWindow__innerCard,
+  .widget__innerCard {
+    background: rgba(18, 20, 33, 0.643);
+    color: rgb(174, 174, 176);
+  }
+  .dark,
+  .popUpWindow__card__elements span:nth-child(1) {
+    color: rgb(234, 234, 234);
+  }
+}
+.widget__card__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr;
+  align-items: center;
+  margin-left: 17px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.popUp__body {
+  padding: 20px 15px;
+  font-weight: bold;
+  color: var(--gray);
+}
+/* inside modal card end */
+
+/* new css end */
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.infoButton {
+  width: 6rem;
+  height: 2rem;
+  margin-top: 15px;
+}
+
+.popUp__submit_btns {
+  display: flex;
+  float: right;
+}
+.popUp {
+  padding: 10px;
+  margin-right: 10px;
+}
+/* 
+.input__container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.input__label {
+  color: var(--gray);
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 5px;
+} */
+.infoInput {
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  /* flex: 1; */
+}
+.input__error {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 5px;
+}
+.form__select {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form__select > select {
+  width: 70%;
+}
+
+.bill__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+.bill__info {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+}
+.bill__info p {
+  padding: 10px;
+  font-size: 12px;
+}
+.switch {
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  /* color: #5bc8ab; */
+  /* margin-right: auto; */
+}
+
+.switch > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__Info__container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .left__side {
+    margin-top: 20px;
+  }
+  .left__side img {
+    height: 150px;
+  }
+}

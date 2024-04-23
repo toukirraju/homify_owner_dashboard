@@ -1,0 +1,25 @@
+{
+  "short_name": "Homify Dashboard",
+  "name": "Make Life More Easier",
+  "icons": [
+    {
+      "src": "homifydashboardround-76x76.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    },
+    {
+      "src": "homeFy_round_dashboard192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "homeFy_round_dashboard512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#1a202c",
+  "background_color": "#1a202c"
+}

@@ -1,0 +1,19 @@
+.create__btn {
+  margin: 10px;
+  padding: 10px 30px;
+}
+.input__container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 0.5rem;
+  /* width: 50%; */
+  margin: 10px 0;
+}
+.input__label {
+  color: var(--gray);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 5px;
+}

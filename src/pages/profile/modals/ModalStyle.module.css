@@ -1,0 +1,160 @@
+
+/* new css start */
+.input__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding:  5px 0;
+}
+.input__label {
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 5px;
+}
+.address_container{
+  display: flex;
+  gap: 10px;
+}
+.address_container input{
+  width: 100%;
+}
+.checkbox_container{
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 700;
+}
+.checkbox_1{
+  background: rgb(224, 224, 224);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+}
+.submit_button{
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+
+
+
+/* inside modal card start */
+.widget__innerCard{
+  background: rgb(255, 255, 255);
+  box-shadow: 0 1px 4px 4px rgba(0, 0, 0, 0.1);
+  margin: 3px 5px;
+  padding: 7px 0;
+  border-radius: 5px;
+  margin-top: 6px;
+  color: var(--gray);
+}
+.widget__card__content{
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr;
+  align-items: center;
+  margin-left: 17px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  
+}
+
+.popUp__body {
+  padding: 20px 15px;
+  font-weight: bold;
+  color: var(--gray);
+}
+/* inside modal card end */
+
+
+/* new css end */
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.infoButton {
+  width: 6rem;
+  height: 2rem;
+  margin-top: 15px;
+}
+
+
+.popUp__submit_btns {
+  display: flex;
+  float: right;
+}
+.popUp {
+  padding: 10px;
+  margin-right: 10px;
+}
+/* 
+.input__container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.input__label {
+  color: var(--gray);
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 5px;
+} */
+.infoInput {
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  /* flex: 1; */
+}
+.input__error {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 5px;
+}
+.form__select {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form__select > select {
+  width: 70%;
+}
+
+.bill__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+.bill__info {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+}
+.bill__info p {
+  padding: 10px;
+  font-size: 12px;
+}
+.switch {
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  /* color: #5bc8ab; */
+  margin-right: auto;
+}

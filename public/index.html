@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="icon" type="image/png" href="homeFy_round_Logo.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/homeFy_Logo_apple_touch.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.0/css/line.css"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.min.js"
+      integrity="sha512-AI5A3zIoeRSEEX9z3Vyir8NqSMC1pY7r5h2cE+9J6FLsoEmSSGLFaqMQw8SWvoONXogkfFrkQiJfLeHLz3+HOg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>Dashboard</title>
+    <style>
+      .loading_container {
+        align-items: center;
+        background-color: rgb(187, 187, 187);
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        width: 100vw;
+        overflow-y: hidden;
+      }
+      @media only screen and (max-width: 500px) {
+        .loading_container img {
+          width: 100%;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        .loading_container {
+          background-color: #1a202c;
+        }
+      }
+    </style>
+  </head>
+  <body style="margin: 0px">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root">
+      <div id="spinner" class="loading_container">
+        <img src="animationLogo.gif" />
+      </div>
+    </div>
+  </body>
+</html>

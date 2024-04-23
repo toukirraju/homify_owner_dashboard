@@ -1,0 +1,96 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 70%;
+    padding: 0 20px;
+}
+.title{
+    color: gray;
+    text-align: center;
+    margin: 20px;
+}
+.form__row{
+    background: rgb(248, 244, 244);
+    padding: .5rem;
+    margin-bottom: .5rem;
+    border-radius: 6px;
+}
+.form__row label{
+    width: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    /* color: rgb(74, 77, 77); */
+}
+.form__row input,select{
+    display: block;
+    width: 100%;
+    height: 2rem;
+    /* background: rgb(235, 230, 230); */
+    border: none;
+    /* border-radius: 2px; */
+    outline: none;
+    font-size: 16px;
+    padding:0 .2rem;
+}
+
+.input__error,.error{
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.isAccount{
+    display: block;
+    padding: 0 8px ;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 700;
+}
+.isAccount:hover{
+    color: rgb(125, 192, 170);
+}
+
+.signinButton{
+    height: 2rem;
+    width: 4rem;
+}
+/* button:disabled {
+    width: 4rem;
+    background: silver;
+    pointer-events: none;
+    cursor: wait;
+  } */
+
+
+ 
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {.form__row{
+        /* width: calc(100vw - 100px); */
+    }}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {.form__row{
+        width: calc(100vw - 100px);
+    }} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {.form__row{
+        /* width: calc(100vw - 500px); */
+    }}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {.form__row{
+        /* width: calc(100vw - 700px); */
+    }}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {.form__row{
+        /* width: 100% */
+    }}

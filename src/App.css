@@ -1,0 +1,509 @@
+:root {
+  --yellow: #f5c32c;
+  --orange: #fca61f;
+  --black: #242d49;
+  --red: #f92525;
+  --btnHoverColor: #5bc8ab;
+  --gray: rgba(164, 166, 177, 0.65);
+  --lightGray: rgba(190, 190, 190, 0.65);
+  --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+  --hrColor: #cfcdcd;
+  --cardColor: rgba(255, 255, 255, 0.64);
+  /* --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%); */
+
+  --buttonBg: linear-gradient(98.63deg, #5bc8ab 0%, #3cb7ca 100%);
+  --removeButtonBg: linear-gradient(98.63deg, #e15a3c 0%, #d86c3a 100%);
+  --warngingButton: linear-gradient(98.63deg, #b0f314 0%, #cdd620 100%);
+  --warningHoverColor: #e5ee41;
+  --inputColor: rgba(40, 52, 62, 0.07);
+  --photo: #4cb256;
+  --video: #4a4eb7;
+  --location: #ef5757;
+  --shedule: #e1ae4a;
+}
+
+.App {
+  display: flex;
+  overflow: hidden;
+  color: var(--black);
+  background: #e2e1e1;
+}
+/* Dark mode */
+.dark .App {
+  background-color: #1a202c;
+}
+@media (prefers-color-scheme: dark) {
+  .dark .App {
+    background-color: #1a202c;
+  }
+}
+
+.body_container {
+  height: 100vh;
+  flex: 1;
+  margin: 0 10px 0;
+}
+
+/* .body__wrapper {
+  height: 87%;
+  margin-top: 10px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+} */
+
+.sidebar_container {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.error__msg {
+  padding: 10px 20px;
+  color: #e15a3c;
+}
+
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: rgba(102, 211, 221, 0.867);
+  /* background: var(--buttonBg); */
+  filter: blur(72px);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(69, 94, 99, 0.33);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+/* Dark mode */
+.dark .card {
+  background: rgba(255, 255, 255, 0.05);
+}
+@media (prefers-color-scheme: dark) {
+  .dark .card {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.title {
+  color: gray;
+  font-weight: 700;
+}
+/* Dark mode */
+.dark .title {
+  color: rgb(215, 215, 215);
+}
+@media (prefers-color-scheme: dark) {
+  .dark .title {
+    color: rgb(215, 215, 215);
+  }
+}
+
+.subtitle {
+  color: gray;
+  font-weight: 600;
+}
+/* Dark mode */
+.dark .subtitle {
+  color: rgb(189, 189, 189);
+}
+@media (prefers-color-scheme: dark) {
+  .dark .subtitle {
+    color: rgb(189, 189, 189);
+  }
+}
+
+.loading__screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999999;
+}
+
+input,
+select {
+  /* border: none; */
+  outline: none;
+  background-color: var(--inputColor);
+  border-radius: 8px;
+  padding: 10px;
+  flex: 1;
+}
+.btns {
+  height: 35px;
+  padding: 7px;
+  margin: 2px;
+}
+
+button:disabled {
+  background: silver;
+  cursor: not-allowed;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.submit_button {
+  background-image: linear-gradient(
+    to right,
+    #02aab0 0%,
+    #00cdac 51%,
+    #02aab0 100%
+  );
+
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 4px #eee;
+  border-radius: 10px;
+  border: 3px solid rgb(38, 38, 40);
+  display: block;
+  cursor: pointer;
+}
+
+.submit_button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.warning_button {
+  background-image: linear-gradient(
+    to right,
+    #e4a11b 0%,
+    #c07a02 51%,
+    #e4a11b 100%
+  );
+
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 4px #eee;
+  border-radius: 10px;
+  border: 3px solid rgb(38, 38, 40);
+  display: block;
+  cursor: pointer;
+}
+
+.warning_button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.removeButton {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 5px #eee;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.updateButton {
+  background-image: linear-gradient(
+    to right,
+    #f09819 0%,
+    #edde5d 51%,
+    #f09819 100%
+  );
+  /* margin: 10px;
+  padding: 15px 45px; */
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 5px #eee;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.updateButton:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Dark mode */
+.dark .submit_button {
+  box-shadow: 0 0 6px #eee;
+}
+@media (prefers-color-scheme: dark) {
+  .dark .submit_button {
+    box-shadow: 0 0 6px #eee;
+  }
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding: 0 10px;
+  height: 50px;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+/* Dark mode */
+.dark .headerContainer {
+  color: rgb(217, 217, 217);
+}
+@media (prefers-color-scheme: dark) {
+  .dark .headerContainer {
+    color: rgb(217, 217, 217);
+  }
+}
+
+/***************** ag grid table css start *********************/
+.ag-root-wrapper {
+  border-color: transparent !important;
+}
+
+/* Dark mode */
+.dark .ag-theme-alpine {
+  --ag-foreground-color: rgb(225, 225, 225);
+  --ag-background-color: rgb(22, 22, 43);
+  --ag-header-foreground-color: rgb(208, 208, 208);
+  --ag-header-background-color: rgb(41, 61, 85);
+  --ag-odd-row-background-color: rgb(0, 0, 0, 0.03);
+  --ag-header-column-resize-handle-color: rgb(126, 46, 132);
+
+  --ag-font-size: 17px;
+  --ag-font-family: monospace;
+}
+@media (prefers-color-scheme: dark) {
+  .dark .ag-theme-alpine {
+    --ag-foreground-color: rgb(225, 225, 225);
+    --ag-background-color: rgb(22, 22, 43);
+    --ag-header-foreground-color: rgb(208, 208, 208);
+    --ag-header-background-color: rgb(41, 61, 85);
+    --ag-odd-row-background-color: rgb(0, 0, 0, 0.03);
+    --ag-header-column-resize-handle-color: rgb(126, 46, 132);
+
+    --ag-font-size: 17px;
+    --ag-font-family: monospace;
+  }
+}
+
+/***************** ag grid table css end *********************/
+/***************** mantine table css start *********************/
+.mantine-l92qfj tr {
+  color: #110d0d;
+}
+/* Dark mode */
+.dark .mantine-l92qfj th {
+  background: #0f131f;
+  color: #cfcdcd;
+}
+.dark .mantine-l92qfj tr {
+  background: #0f131f;
+  color: #cfcdcd;
+}
+@media (prefers-color-scheme: dark) {
+  .dark .mantine-l92qfj th {
+    background: #0f131f;
+    color: #cfcdcd;
+  }
+  .dark .mantine-l92qfj tr {
+    background: #0f131f;
+    color: #cfcdcd;
+  }
+}
+
+/***************** mantine table css start *********************/
+
+/********************************************************** popup Modal design start  ***********************************************************/
+.modal__Body {
+  background: rgba(9, 10, 27, 0.8);
+}
+.modal__title {
+  color: aliceblue;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 20px;
+}
+.modal__close {
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.modal__close:hover {
+  color: rgb(153, 0, 0);
+}
+
+/* Dark mode */
+.dark .modal__Body {
+  background: rgba(9, 10, 27, 0.5);
+}
+@media (prefers-color-scheme: dark) {
+  .dark .modal__Body {
+    background: rgba(9, 10, 27, 0.5);
+  }
+}
+
+/************************************************************ popup Modal design end  ************************************************************/
+/* maintain date picker  */
+.mantine-1nhmqkh {
+  background: #414345;
+}
+.mantine-yk7rqr {
+  background: #414345;
+  color: white;
+  box-shadow: 0 0 10px #949494;
+}
+
+.mantine-yk7rqr:hover {
+  background: #366493;
+  color: white;
+  box-shadow: 0 0 10px #949494;
+}
+
+.mantine-yk7rqr:disabled {
+  background: #595757;
+  color: rgb(104, 104, 104);
+  box-shadow: 0 0 6px #949494;
+  border-radius: 6px;
+}
+
+/* Scrollbar design start */
+
+::-webkit-scrollbar {
+  /* display: none;  */
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  /* background-color: darkgrey; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3c3c3f;
+  /* background-image: var(--buttonBg); */
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+/* Set the styles for the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: var(--buttonBg);
+}
+
+/* Scrollbar design end */
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.spinner {
+  margin: auto;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  /* background-color: rgb(255, 255, 255); */
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 18%,
+    rgba(96, 96, 96, 1) 80%
+  );
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .body_container {
+    height: calc(100vh - 50px);
+  }
+  .table__wrapper {
+    z-index: 1;
+  }
+  .sidebar_container {
+    z-index: 999;
+  }
+}

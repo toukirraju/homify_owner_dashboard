@@ -1,0 +1,63 @@
+.btn__container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  min-height: 3.5rem;
+  /* margin: 10px 0; */
+  gap: 8px;
+}
+
+.makeBill__button {
+  background-image: linear-gradient(
+    to right,
+    #1d976c 0%,
+    #5ce98f 51%,
+    #1d976c 100%
+  );
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(235, 243, 242);
+  box-shadow: 0 0 3px #eee;
+  border-radius: 10px;
+  border: 3px solid rgb(66, 66, 66);
+  display: block;
+}
+
+.makeBill__button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.tempBill__button {
+  background-image: linear-gradient(
+    to right,
+    #43c6ac 0%,
+    #191654 51%,
+    #43c6ac 100%
+  );
+  /* margin: 10px;
+  padding: 15px 45px; */
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.tempBill__button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .btn__container {
+    grid-template-columns: auto auto auto;
+  }
+}
